@@ -6,22 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://buaaserein.github.io">
-  <title>First Blog | Serein的博客</title>
+  <title>Tag: 算法 | Serein的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C4 - F 题解题目链接图图 参考链接最短路">
-<meta property="og:type" content="article">
-<meta property="og:title" content="First Blog">
-<meta property="og:url" content="https://buaaserein.github.io/2021/04/04/First-Blog/index.html">
+  <meta name="description" content="Serein的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Serein的博客">
+<meta property="og:url" content="https://buaaserein.github.io/tags/%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Serein的博客">
-<meta property="og:description" content="C4 - F 题解题目链接图图 参考链接最短路">
+<meta property="og:description" content="Serein的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://buaaserein.github.io/2021/04/04/First-Blog/2021-04-04-23-18-52.png">
-<meta property="article:published_time" content="2021-04-04T12:18:04.000Z">
-<meta property="article:modified_time" content="2021-04-04T15:33:37.127Z">
 <meta property="article:author" content="Serein">
-<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://buaaserein.github.io/2021/04/04/First-Blog/2021-04-04-23-18-52.png">
   
     <link rel="alternative" href="/atom.xml" title="Serein的博客" type="application/atom+xml">
   
@@ -131,200 +126,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-First-Blog" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      First Blog
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/04/04/Second/" class="archive-article-date">
+  	<time datetime="2021-04-04T15:33:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/04/04/Second/">图图题解</a>
     </h1>
   
 
-        
-        <a href="/2021/04/04/First-Blog/" class="archive-article-date">
-  	<time datetime="2021-04-04T12:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C4-F-题解"><a href="#C4-F-题解" class="headerlink" title="C4 - F 题解"></a>C4 - F 题解</h1><h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a target="_blank" rel="noopener" href="https://accoding.cn/problem/2741/index">图图</a></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://oi-wiki.org//graph/shortest-path/#d-esopo-pape">最短路</a></p>
-<span id="more"></span>
-
-<p><img src="/2021/04/04/First-Blog/2021-04-04-23-18-52.png"></p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ul>
-<li>全源最短路模板题，$N$ 最大只有 $200$ ， $Floyd$ 算法的复杂度是 $O(N^3)$ ，可以通过这道题。</li>
-<li>$Johnson$ 算法的复杂度是 $O(NM\log M)$ ，更为优秀。</li>
-</ul>
-<h4 id="Floyd-140ms"><a href="#Floyd-140ms" class="headerlink" title="Floyd - 140ms"></a>Floyd - 140ms</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, a, n) for(int i = a; i &lt;= n; i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">200</span> + <span class="number">10</span>, inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> d[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> t, n, m, mxx;</span><br><span class="line"><span class="keyword">int</span> x, y, z;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> x = <span class="number">0</span>, t = <span class="number">1</span>; <span class="keyword">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">       <span class="keyword">while</span> ((ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &amp;&amp; ch != <span class="string">&#x27;-&#x27;</span>)ch = <span class="built_in">getchar</span>();</span><br><span class="line">       <span class="keyword">if</span> (ch==<span class="string">&#x27;-&#x27;</span>) &#123; t = <span class="number">-1</span>; ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">       <span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>)&#123; x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (ch^<span class="number">48</span>); ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">       <span class="keyword">return</span> x * t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">floyd</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">rep</span>(k, <span class="number">1</span>, n)&#123;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				d[i][j] = <span class="built_in">min</span>(d[i][j], d[i][k] + d[k][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	t = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">while</span> (t--)&#123;</span><br><span class="line">		n = <span class="built_in">read</span>(); m = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">memset</span>(d, <span class="number">0x3f</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(d));</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			d[i][i] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, m)&#123;</span><br><span class="line">			x = <span class="built_in">read</span>(); y = <span class="built_in">read</span>(); z = <span class="built_in">read</span>();</span><br><span class="line">			d[x][y] = z;</span><br><span class="line">		&#125;</span><br><span class="line">		mxx = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">floyd</span>();</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span> (d[i][j] != inf)&#123;</span><br><span class="line">					mxx = <span class="built_in">max</span>(mxx, d[i][j]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span> (d[i][j] == mxx)&#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, j);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="关于-Johnson-算法"><a href="#关于-Johnson-算法" class="headerlink" title="关于 Johnson 算法"></a>关于 Johnson 算法</h4><p>这里有一道模板题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5905">Johnson 全源最短路</a> 。</p>
-<p>通过这道题后，改下输入输出即可通过本题。</p>
-<ul>
-<li>需要说明的是，本题中边权 $c$ 都是正数，故可以不跑 $SPFA$ ，只跑 $n$ 次 $dijkstra$ ，在此给出完整代码。</li>
-</ul>
-<h4 id="Johnson-69ms"><a href="#Johnson-69ms" class="headerlink" title="Johnson - 69ms"></a>Johnson - 69ms</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, a, n) for(int i = a; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _rep(i, n, a) for(int i = n; i &gt;= a; i--)</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e2</span> + <span class="number">10</span>, inf = <span class="number">1e9</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, t = <span class="number">1</span>; <span class="keyword">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> ((ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &amp;&amp; ch != <span class="string">&#x27;-&#x27;</span>)ch = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">if</span> (ch==<span class="string">&#x27;-&#x27;</span>) &#123; t = <span class="number">-1</span>; ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>)&#123; x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (ch^<span class="number">48</span>); ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n, m, s, t, mxx;</span><br><span class="line"><span class="keyword">int</span> dis[maxn], vis[maxn], cnt[maxn], h[maxn];</span><br><span class="line"><span class="keyword">int</span> ans[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> x, y, z, val;</span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; g[maxn], d[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">SPFA</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">1</span>, n) h[i] = inf;</span><br><span class="line">	q.<span class="built_in">push</span>(s); h[s] = <span class="number">0</span>; vis[s] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		y = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		vis[y] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(g[y].<span class="built_in">empty</span>())&#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">0</span>, g[y].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">			x = g[y][i];</span><br><span class="line">			val = d[y][i];</span><br><span class="line">			<span class="keyword">if</span>(h[y]  + val &lt; h[x])&#123;</span><br><span class="line">				h[x] = h[y] + val;</span><br><span class="line">				<span class="keyword">if</span>(vis[x] == <span class="number">0</span>)&#123;</span><br><span class="line">					q.<span class="built_in">push</span>(x);</span><br><span class="line">					vis[x] = <span class="number">1</span>;</span><br><span class="line">					cnt[x]++;</span><br><span class="line">					<span class="keyword">if</span>(cnt[x] == n) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	priority_queue&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;, vector&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt;, greater&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; &gt; q;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">1</span>, n) dis[i] = inf;</span><br><span class="line">	<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(vis));</span><br><span class="line">	dis[s] = <span class="number">0</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>, s));</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		y = q.<span class="built_in">top</span>().second;</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">if</span>(vis[y]) <span class="keyword">continue</span>;</span><br><span class="line">		vis[y] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(g[y].<span class="built_in">empty</span>()) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">0</span>, g[y].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">			x = g[y][i];</span><br><span class="line">			val = d[y][i];</span><br><span class="line">			<span class="keyword">if</span>(dis[y] + val &lt; dis[x])&#123;</span><br><span class="line">				dis[x] = dis[y] + val;</span><br><span class="line">				<span class="keyword">if</span>(!vis[x])&#123;</span><br><span class="line">					q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(dis[x], x));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	mxx = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">0</span>, n)&#123;</span><br><span class="line">		g[i].<span class="built_in">clear</span>();</span><br><span class="line">		d[i].<span class="built_in">clear</span>();</span><br><span class="line">		dis[i] = inf, vis[i] = <span class="number">0</span>; cnt[i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	t = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		n = <span class="built_in">read</span>(), m = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">init</span>();</span><br><span class="line">		s = <span class="number">1</span>;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, m)&#123;</span><br><span class="line">			y = <span class="built_in">read</span>(); x = <span class="built_in">read</span>(); z = <span class="built_in">read</span>();</span><br><span class="line">			g[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">			d[y].<span class="built_in">push_back</span>(z);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			g[<span class="number">0</span>].<span class="built_in">push_back</span>(i);</span><br><span class="line">			d[<span class="number">0</span>].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">SPFA</span>(<span class="number">0</span>) == <span class="literal">false</span>)&#123;</span><br><span class="line">			cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="keyword">if</span>(g[i].<span class="built_in">empty</span>()) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">0</span>, g[i].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">				d[i][j] += h[i] - h[g[i][j]];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">dijkstra</span>(i);</span><br><span class="line">			<span class="built_in">rep</span>(j ,<span class="number">1</span>, n)&#123;</span><br><span class="line">				ans[i][j] = dis[j];</span><br><span class="line">				<span class="keyword">if</span>(ans[i][j] != inf) mxx = <span class="built_in">max</span>(mxx, ans[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span>(ans[i][j] == mxx) <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, j);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>三角不等式 $h_v \le \ h_u + w(u,v)$</p>
-
-      
-
-      <!-- <div class="article-entry" itemprop="articleBody">
-        
+        <div class="article-info info-on-right">
           
-          
-            <h1 id="C4-F-题解"><a href="#C4-F-题解" class="headerlink" title="C4 - F 题解"></a>C4 - F 题解</h1><h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a target="_blank" rel="noopener" href="https://accoding.cn/problem/2741/index">图图</a></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://oi-wiki.org//graph/shortest-path/#d-esopo-pape">最短路</a></p>
-<span id="more"></span>
-
-<p><img src="/2021/04/04/First-Blog/2021-04-04-23-18-52.png"></p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ul>
-<li>全源最短路模板题，$N$ 最大只有 $200$ ， $Floyd$ 算法的复杂度是 $O(N^3)$ ，可以通过这道题。</li>
-<li>$Johnson$ 算法的复杂度是 $O(NM\log M)$ ，更为优秀。</li>
-</ul>
-<h4 id="Floyd-140ms"><a href="#Floyd-140ms" class="headerlink" title="Floyd - 140ms"></a>Floyd - 140ms</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, a, n) for(int i = a; i &lt;= n; i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">200</span> + <span class="number">10</span>, inf = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> d[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> t, n, m, mxx;</span><br><span class="line"><span class="keyword">int</span> x, y, z;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> x = <span class="number">0</span>, t = <span class="number">1</span>; <span class="keyword">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">       <span class="keyword">while</span> ((ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &amp;&amp; ch != <span class="string">&#x27;-&#x27;</span>)ch = <span class="built_in">getchar</span>();</span><br><span class="line">       <span class="keyword">if</span> (ch==<span class="string">&#x27;-&#x27;</span>) &#123; t = <span class="number">-1</span>; ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">       <span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>)&#123; x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (ch^<span class="number">48</span>); ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">       <span class="keyword">return</span> x * t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">floyd</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">rep</span>(k, <span class="number">1</span>, n)&#123;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				d[i][j] = <span class="built_in">min</span>(d[i][j], d[i][k] + d[k][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	t = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">while</span> (t--)&#123;</span><br><span class="line">		n = <span class="built_in">read</span>(); m = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">memset</span>(d, <span class="number">0x3f</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(d));</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			d[i][i] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, m)&#123;</span><br><span class="line">			x = <span class="built_in">read</span>(); y = <span class="built_in">read</span>(); z = <span class="built_in">read</span>();</span><br><span class="line">			d[x][y] = z;</span><br><span class="line">		&#125;</span><br><span class="line">		mxx = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">floyd</span>();</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span> (d[i][j] != inf)&#123;</span><br><span class="line">					mxx = <span class="built_in">max</span>(mxx, d[i][j]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span> (d[i][j] == mxx)&#123;</span><br><span class="line">					<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, j);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="关于-Johnson-算法"><a href="#关于-Johnson-算法" class="headerlink" title="关于 Johnson 算法"></a>关于 Johnson 算法</h4><p>这里有一道模板题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5905">Johnson 全源最短路</a> 。</p>
-<p>通过这道题后，改下输入输出即可通过本题。</p>
-<ul>
-<li>需要说明的是，本题中边权 $c$ 都是正数，故可以不跑 $SPFA$ ，只跑 $n$ 次 $dijkstra$ ，在此给出完整代码。</li>
-</ul>
-<h4 id="Johnson-69ms"><a href="#Johnson-69ms" class="headerlink" title="Johnson - 69ms"></a>Johnson - 69ms</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, a, n) for(int i = a; i &lt;= n; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _rep(i, n, a) for(int i = n; i &gt;= a; i--)</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e2</span> + <span class="number">10</span>, inf = <span class="number">1e9</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, t = <span class="number">1</span>; <span class="keyword">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> ((ch &lt; <span class="string">&#x27;0&#x27;</span> || ch &gt; <span class="string">&#x27;9&#x27;</span>) &amp;&amp; ch != <span class="string">&#x27;-&#x27;</span>)ch = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">if</span> (ch==<span class="string">&#x27;-&#x27;</span>) &#123; t = <span class="number">-1</span>; ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>)&#123; x = (x&lt;&lt;<span class="number">3</span>) + (x&lt;&lt;<span class="number">1</span>) + (ch^<span class="number">48</span>); ch = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n, m, s, t, mxx;</span><br><span class="line"><span class="keyword">int</span> dis[maxn], vis[maxn], cnt[maxn], h[maxn];</span><br><span class="line"><span class="keyword">int</span> ans[maxn][maxn];</span><br><span class="line"><span class="keyword">int</span> x, y, z, val;</span><br><span class="line">vector&lt;<span class="keyword">int</span>&gt; g[maxn], d[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">SPFA</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">1</span>, n) h[i] = inf;</span><br><span class="line">	q.<span class="built_in">push</span>(s); h[s] = <span class="number">0</span>; vis[s] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		y = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		vis[y] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(g[y].<span class="built_in">empty</span>())&#123;</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">0</span>, g[y].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">			x = g[y][i];</span><br><span class="line">			val = d[y][i];</span><br><span class="line">			<span class="keyword">if</span>(h[y]  + val &lt; h[x])&#123;</span><br><span class="line">				h[x] = h[y] + val;</span><br><span class="line">				<span class="keyword">if</span>(vis[x] == <span class="number">0</span>)&#123;</span><br><span class="line">					q.<span class="built_in">push</span>(x);</span><br><span class="line">					vis[x] = <span class="number">1</span>;</span><br><span class="line">					cnt[x]++;</span><br><span class="line">					<span class="keyword">if</span>(cnt[x] == n) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	priority_queue&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;, vector&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt;, greater&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; &gt; q;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">1</span>, n) dis[i] = inf;</span><br><span class="line">	<span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(vis));</span><br><span class="line">	dis[s] = <span class="number">0</span>;</span><br><span class="line">	q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>, s));</span><br><span class="line">	<span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		y = q.<span class="built_in">top</span>().second;</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">if</span>(vis[y]) <span class="keyword">continue</span>;</span><br><span class="line">		vis[y] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(g[y].<span class="built_in">empty</span>()) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">0</span>, g[y].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">			x = g[y][i];</span><br><span class="line">			val = d[y][i];</span><br><span class="line">			<span class="keyword">if</span>(dis[y] + val &lt; dis[x])&#123;</span><br><span class="line">				dis[x] = dis[y] + val;</span><br><span class="line">				<span class="keyword">if</span>(!vis[x])&#123;</span><br><span class="line">					q.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(dis[x], x));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	mxx = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">rep</span>(i, <span class="number">0</span>, n)&#123;</span><br><span class="line">		g[i].<span class="built_in">clear</span>();</span><br><span class="line">		d[i].<span class="built_in">clear</span>();</span><br><span class="line">		dis[i] = inf, vis[i] = <span class="number">0</span>; cnt[i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	t = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		n = <span class="built_in">read</span>(), m = <span class="built_in">read</span>();</span><br><span class="line">		<span class="built_in">init</span>();</span><br><span class="line">		s = <span class="number">1</span>;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, m)&#123;</span><br><span class="line">			y = <span class="built_in">read</span>(); x = <span class="built_in">read</span>(); z = <span class="built_in">read</span>();</span><br><span class="line">			g[y].<span class="built_in">push_back</span>(x);</span><br><span class="line">			d[y].<span class="built_in">push_back</span>(z);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			g[<span class="number">0</span>].<span class="built_in">push_back</span>(i);</span><br><span class="line">			d[<span class="number">0</span>].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">SPFA</span>(<span class="number">0</span>) == <span class="literal">false</span>)&#123;</span><br><span class="line">			cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="keyword">if</span>(g[i].<span class="built_in">empty</span>()) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">0</span>, g[i].<span class="built_in">size</span>() - <span class="number">1</span>)&#123;</span><br><span class="line">				d[i][j] += h[i] - h[g[i][j]];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">dijkstra</span>(i);</span><br><span class="line">			<span class="built_in">rep</span>(j ,<span class="number">1</span>, n)&#123;</span><br><span class="line">				ans[i][j] = dis[j];</span><br><span class="line">				<span class="keyword">if</span>(ans[i][j] != inf) mxx = <span class="built_in">max</span>(mxx, ans[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">rep</span>(i, <span class="number">1</span>, n)&#123;</span><br><span class="line">			<span class="built_in">rep</span>(j, <span class="number">1</span>, n)&#123;</span><br><span class="line">				<span class="keyword">if</span>(ans[i][j] == mxx) <span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, i, j);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>三角不等式 $h_v \le \ h_u + w(u,v)$</p>
-
-          
-         -->
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://buaaserein.github.io/2021/04/04/First-Blog/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/04/04/Second/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Second
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/04/04/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -347,9 +202,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -422,7 +277,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">题解</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
