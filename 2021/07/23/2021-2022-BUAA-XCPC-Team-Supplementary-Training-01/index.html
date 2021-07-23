@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://buaaserein.github.io">
-  <title>Archives: 2021 | Serein的博客</title>
+  <title>2021-2022 BUAA XCPC Team Supplementary Training 01 | Serein的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Serein的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Serein的博客">
-<meta property="og:url" content="https://buaaserein.github.io/archives/2021/index.html">
+  <meta name="description" content="A. Three Arrays题目描述给出 $3$​​ 个不减的数组，统计满足 $|a_i - b_j| ≤ d, |a_i - c_k| ≤ d, |b_j - c_k| ≤ d$​ 的三元组的数量。 解题思路双指针，滑动窗口。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021-2022 BUAA XCPC Team Supplementary Training 01">
+<meta property="og:url" content="https://buaaserein.github.io/2021/07/23/2021-2022-BUAA-XCPC-Team-Supplementary-Training-01/index.html">
 <meta property="og:site_name" content="Serein的博客">
-<meta property="og:description" content="Serein的博客">
+<meta property="og:description" content="A. Three Arrays题目描述给出 $3$​​ 个不减的数组，统计满足 $|a_i - b_j| ≤ d, |a_i - c_k| ≤ d, |b_j - c_k| ≤ d$​ 的三元组的数量。 解题思路双指针，滑动窗口。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-23T11:40:04.000Z">
+<meta property="article:modified_time" content="2021-07-23T13:10:34.491Z">
 <meta property="article:author" content="Serein">
+<meta property="article:tag" content="training summer">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Serein的博客" type="application/atom+xml">
@@ -126,36 +129,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2021-2022-BUAA-XCPC-Team-Supplementary-Training-01" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/23/2021-2022-BUAA-XCPC-Team-Supplementary-Training-01/" class="archive-article-date">
-  	<time datetime="2021-07-23T11:40:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/23/2021-2022-BUAA-XCPC-Team-Supplementary-Training-01/">2021-2022 BUAA XCPC Team Supplementary Training 01</a>
+    <h1 class="article-title" itemprop="name">
+      2021-2022 BUAA XCPC Team Supplementary Training 01
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2021/07/23/2021-2022-BUAA-XCPC-Team-Supplementary-Training-01/" class="archive-article-date">
+  	<time datetime="2021-07-23T11:40:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="A-Three-Arrays"><a href="#A-Three-Arrays" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>给出 $3$​​ 个不减的数组，统计满足 $|a_i - b_j| ≤ d, |a_i - c_k| ≤ d, |b_j - c_k| ≤ d$​ 的三元组的数量。</p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>双指针，滑动窗口。</p>
+<span id="more"></span>
+
+<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bug printf(<span class="meta-string">&quot;!!!!!\n&quot;</span>);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	LL x = <span class="number">0</span>, fl = <span class="number">1</span>; <span class="keyword">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>) &#123; <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) fl = <span class="number">-1</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>) &#123; x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * fl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2000010</span>, M = <span class="number">100010</span>, mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n, d, na, nb, nc;</span><br><span class="line">PII a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;d, &amp;na, &amp;nb, &amp;nc) != <span class="number">-1</span>) &#123;</span><br><span class="line">		n = na + nb + nc;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= na; i ++) &#123;</span><br><span class="line">			a[i] = &#123;<span class="built_in">read</span>(), <span class="number">1</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nb; i ++) &#123;</span><br><span class="line">			a[i + na] = &#123;<span class="built_in">read</span>(), <span class="number">2</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nc; i ++) &#123;</span><br><span class="line">			a[i + na + nb] = &#123;<span class="built_in">read</span>(), <span class="number">3</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">sort</span>(a + <span class="number">1</span>, a + <span class="number">1</span> + n);</span><br><span class="line">		LL cnt[<span class="number">5</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		LL res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> l = <span class="number">1</span>, r = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (r &lt;= n) &#123;		</span><br><span class="line">			cnt[a[r].second] ++;</span><br><span class="line">			<span class="keyword">while</span> (a[r].first - a[l].first &gt; d) &#123;</span><br><span class="line">				cnt[a[l].second] --;</span><br><span class="line">				l ++;</span><br><span class="line">			&#125;</span><br><span class="line">			res += cnt[<span class="number">1</span>] * cnt[<span class="number">2</span>] * cnt[<span class="number">3</span>] / cnt[a[r].second];</span><br><span class="line">			r ++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D. Elevator"></a>D. Elevator</h2><h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>给出 $n$ 个人到达的时间和想要到达的楼层，求送完所有人后电梯返回的最小时间。</p>
+<h4 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h4><p>先利用单调栈处理出一个严格递减的序列，然后只需考虑栈中的元素。</p>
+<p>考虑如下 dp：令 $dp[i]$ 表示前 $i$ 个人已到达且电梯已返回 floor 0 的最小时间，转移方程：</p>
+<p>$dp[i]=min_{j=0}^{i-1}{max(dp[j], t[i]) + 2 * h[j + 1]}$ </p>
+<ul>
+<li>若 $dp[j] &lt;= t[i]$ ，则找 $h[j+1]$ 的最小值，由于其是递减的，故只需考虑满足条件的最大的 $j$​，可以二分来找。</li>
+<li>若 $dp[j] &gt; t[i]$ ，这种情况需要找到 $dp[j] + 2 * h[j + 1]$ 的最大值，使用优先队列维护即可。</li>
+</ul>
+<h4 id="AC代码-1"><a href="#AC代码-1" class="headerlink" title="AC代码"></a>AC代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bug printf(<span class="meta-string">&quot;!!!!!\n&quot;</span>);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;LL, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	LL x = <span class="number">0</span>, fl = <span class="number">1</span>; <span class="keyword">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>) &#123; <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) fl = <span class="number">-1</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>) &#123; x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * fl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">200010</span>, M = <span class="number">100010</span>, mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, k, top;</span><br><span class="line">LL t[N], h[N], dp[N];</span><br><span class="line">priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt; &gt; q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n) != <span class="number">-1</span>) &#123;</span><br><span class="line">		top = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">			<span class="keyword">int</span> a = <span class="built_in">read</span>(), b = <span class="built_in">read</span>();</span><br><span class="line">			<span class="keyword">while</span>(top &amp;&amp; b &gt;= h[top - <span class="number">1</span>])	top --;</span><br><span class="line">			t[top] = a;</span><br><span class="line">			h[top ++] = b;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(!q.<span class="built_in">empty</span>()) q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; top; i ++) &#123;</span><br><span class="line">			k = <span class="built_in">upper_bound</span>(dp, dp + i, t[i]) - dp - <span class="number">1</span>;</span><br><span class="line">			dp[i] = t[i] + <span class="number">2</span> * h[k + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">				PII u = q.<span class="built_in">top</span>();</span><br><span class="line">				<span class="keyword">if</span>(u.first - <span class="number">2</span> * h[u.second] &lt;= t[i]) &#123;</span><br><span class="line">					q.<span class="built_in">pop</span>();</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> &#123;</span><br><span class="line">					dp[i] = <span class="built_in">min</span>(dp[i], u.first);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			q.<span class="built_in">push</span>(&#123;dp[i] + <span class="number">2</span> * h[i + <span class="number">1</span>], i + <span class="number">1</span>&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, dp[top - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="A-Three-Arrays-1"><a href="#A-Three-Arrays-1" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-2"><a href="#AC代码-2" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-2"><a href="#A-Three-Arrays-2" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-3"><a href="#AC代码-3" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-3"><a href="#A-Three-Arrays-3" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-4"><a href="#AC代码-4" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-4"><a href="#A-Three-Arrays-4" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-5"><a href="#AC代码-5" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-5"><a href="#A-Three-Arrays-5" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-6"><a href="#AC代码-6" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-6"><a href="#A-Three-Arrays-6" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-7"><a href="#AC代码-7" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-7"><a href="#A-Three-Arrays-7" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-8"><a href="#解题思路-8" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-8"><a href="#AC代码-8" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-8"><a href="#A-Three-Arrays-8" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-9"><a href="#题目描述-9" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-9"><a href="#解题思路-9" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-9"><a href="#AC代码-9" class="headerlink" title="AC代码"></a>AC代码</h4>
+      
+
+      <!-- <div class="article-entry" itemprop="articleBody">
+        
           
+          
+            <h2 id="A-Three-Arrays"><a href="#A-Three-Arrays" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>给出 $3$​​ 个不减的数组，统计满足 $|a_i - b_j| ≤ d, |a_i - c_k| ≤ d, |b_j - c_k| ≤ d$​ 的三元组的数量。</p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>双指针，滑动窗口。</p>
+<span id="more"></span>
+
+<h4 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bug printf(<span class="meta-string">&quot;!!!!!\n&quot;</span>);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	LL x = <span class="number">0</span>, fl = <span class="number">1</span>; <span class="keyword">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>) &#123; <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) fl = <span class="number">-1</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>) &#123; x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * fl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2000010</span>, M = <span class="number">100010</span>, mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n, d, na, nb, nc;</span><br><span class="line">PII a[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d&quot;</span>, &amp;d, &amp;na, &amp;nb, &amp;nc) != <span class="number">-1</span>) &#123;</span><br><span class="line">		n = na + nb + nc;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= na; i ++) &#123;</span><br><span class="line">			a[i] = &#123;<span class="built_in">read</span>(), <span class="number">1</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nb; i ++) &#123;</span><br><span class="line">			a[i + na] = &#123;<span class="built_in">read</span>(), <span class="number">2</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= nc; i ++) &#123;</span><br><span class="line">			a[i + na + nb] = &#123;<span class="built_in">read</span>(), <span class="number">3</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">sort</span>(a + <span class="number">1</span>, a + <span class="number">1</span> + n);</span><br><span class="line">		LL cnt[<span class="number">5</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">		LL res = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> l = <span class="number">1</span>, r = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (r &lt;= n) &#123;		</span><br><span class="line">			cnt[a[r].second] ++;</span><br><span class="line">			<span class="keyword">while</span> (a[r].first - a[l].first &gt; d) &#123;</span><br><span class="line">				cnt[a[l].second] --;</span><br><span class="line">				l ++;</span><br><span class="line">			&#125;</span><br><span class="line">			res += cnt[<span class="number">1</span>] * cnt[<span class="number">2</span>] * cnt[<span class="number">3</span>] / cnt[a[r].second];</span><br><span class="line">			r ++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, res);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D. Elevator"></a>D. Elevator</h2><h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>给出 $n$ 个人到达的时间和想要到达的楼层，求送完所有人后电梯返回的最小时间。</p>
+<h4 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h4><p>先利用单调栈处理出一个严格递减的序列，然后只需考虑栈中的元素。</p>
+<p>考虑如下 dp：令 $dp[i]$ 表示前 $i$ 个人已到达且电梯已返回 floor 0 的最小时间，转移方程：</p>
+<p>$dp[i]=min_{j=0}^{i-1}{max(dp[j], t[i]) + 2 * h[j + 1]}$ </p>
+<ul>
+<li>若 $dp[j] &lt;= t[i]$ ，则找 $h[j+1]$ 的最小值，由于其是递减的，故只需考虑满足条件的最大的 $j$​，可以二分来找。</li>
+<li>若 $dp[j] &gt; t[i]$ ，这种情况需要找到 $dp[j] + 2 * h[j + 1]$ 的最大值，使用优先队列维护即可。</li>
+</ul>
+<h4 id="AC代码-1"><a href="#AC代码-1" class="headerlink" title="AC代码"></a>AC代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> bug printf(<span class="meta-string">&quot;!!!!!\n&quot;</span>);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;LL, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	LL x = <span class="number">0</span>, fl = <span class="number">1</span>; <span class="keyword">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>) &#123; <span class="keyword">if</span>(c == <span class="string">&#x27;-&#x27;</span>) fl = <span class="number">-1</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>) &#123; x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>; c = <span class="built_in">getchar</span>(); &#125;</span><br><span class="line">	<span class="keyword">return</span> x * fl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">200010</span>, M = <span class="number">100010</span>, mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n, m, k, top;</span><br><span class="line">LL t[N], h[N], dp[N];</span><br><span class="line">priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt; &gt; q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n) != <span class="number">-1</span>) &#123;</span><br><span class="line">		top = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">			<span class="keyword">int</span> a = <span class="built_in">read</span>(), b = <span class="built_in">read</span>();</span><br><span class="line">			<span class="keyword">while</span>(top &amp;&amp; b &gt;= h[top - <span class="number">1</span>])	top --;</span><br><span class="line">			t[top] = a;</span><br><span class="line">			h[top ++] = b;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">while</span>(!q.<span class="built_in">empty</span>()) q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; top; i ++) &#123;</span><br><span class="line">			k = <span class="built_in">upper_bound</span>(dp, dp + i, t[i]) - dp - <span class="number">1</span>;</span><br><span class="line">			dp[i] = t[i] + <span class="number">2</span> * h[k + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">				PII u = q.<span class="built_in">top</span>();</span><br><span class="line">				<span class="keyword">if</span>(u.first - <span class="number">2</span> * h[u.second] &lt;= t[i]) &#123;</span><br><span class="line">					q.<span class="built_in">pop</span>();</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> &#123;</span><br><span class="line">					dp[i] = <span class="built_in">min</span>(dp[i], u.first);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			q.<span class="built_in">push</span>(&#123;dp[i] + <span class="number">2</span> * h[i + <span class="number">1</span>], i + <span class="number">1</span>&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>, dp[top - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="A-Three-Arrays-1"><a href="#A-Three-Arrays-1" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-2"><a href="#AC代码-2" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-2"><a href="#A-Three-Arrays-2" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-3"><a href="#AC代码-3" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-3"><a href="#A-Three-Arrays-3" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-4"><a href="#AC代码-4" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-4"><a href="#A-Three-Arrays-4" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-5"><a href="#AC代码-5" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-5"><a href="#A-Three-Arrays-5" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-6"><a href="#解题思路-6" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-6"><a href="#AC代码-6" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-6"><a href="#A-Three-Arrays-6" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-7"><a href="#解题思路-7" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-7"><a href="#AC代码-7" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-7"><a href="#A-Three-Arrays-7" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-8"><a href="#解题思路-8" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-8"><a href="#AC代码-8" class="headerlink" title="AC代码"></a>AC代码</h4><h2 id="A-Three-Arrays-8"><a href="#A-Three-Arrays-8" class="headerlink" title="A. Three Arrays"></a>A. Three Arrays</h2><h4 id="题目描述-9"><a href="#题目描述-9" class="headerlink" title="题目描述"></a>题目描述</h4><h4 id="解题思路-9"><a href="#解题思路-9" class="headerlink" title="解题思路"></a>解题思路</h4><h4 id="AC代码-9"><a href="#AC代码-9" class="headerlink" title="AC代码"></a>AC代码</h4>
+          
+         -->
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -167,209 +216,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://buaaserein.github.io/2021/07/23/2021-2022-BUAA-XCPC-Team-Supplementary-Training-01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/07/2019-Multi-University-Training-Contest-2/" class="archive-article-date">
-  	<time datetime="2021-07-07T08:58:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/07/2019-Multi-University-Training-Contest-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019 Multi-University Training Contest 2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/07/2019-Multi-University-Training-Contest-2/">2019 Multi-University Training Contest 2</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">training</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/27/2020-2021-ACM-ICPC-Asia-Seoul-Regional-Contest/" class="archive-article-date">
-  	<time datetime="2021-04-27T06:30:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/27/2020-2021-ACM-ICPC-Asia-Seoul-Regional-Contest/">2020-2021 ACM-ICPC Asia Seoul Regional Contest</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">training</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/23/Petrozavodsk-Winter-2018-Day-1-Jagiellonian-U-Contest/" class="archive-article-date">
-  	<time datetime="2021-04-23T00:09:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/23/Petrozavodsk-Winter-2018-Day-1-Jagiellonian-U-Contest/">Petrozavodsk Winter 2018. Day 1: Jagiellonian U Contest</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">training</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/19/2020-CCPC-%E7%A7%A6%E7%9A%87%E5%B2%9B/" class="archive-article-date">
-  	<time datetime="2021-04-19T06:12:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/19/2020-CCPC-%E7%A7%A6%E7%9A%87%E5%B2%9B/">2020 CCPC 秦皇岛</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">training</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/05/The-2017-ACM-ICPC-Asia-Shenyang-Regional-Contest/" class="archive-article-date">
-  	<time datetime="2021-04-04T16:15:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/05/The-2017-ACM-ICPC-Asia-Shenyang-Regional-Contest/">The 2017 ACM-ICPC Asia Shenyang Regional Contest</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">training</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -392,8 +338,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
